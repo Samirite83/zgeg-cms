@@ -1,0 +1,113 @@
+{
+  "kind": "collectionType",
+  "collectionName": "teams",
+  "info": {
+    "singularName": "team",
+    "pluralName": "teams",
+    "displayName": "Team",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "teamID": {
+      "type": "integer"
+    },
+    "teamName": {
+      "type": "string"
+    },
+    "teamFaction": {
+      "type": "string"
+    },
+    "startTickets": {
+      "type": "integer"
+    },
+    "killCount": {
+      "type": "integer",
+      "default": 0
+    },
+    "deathCount": {
+      "type": "integer",
+      "default": 0
+    },
+    "incapCount": {
+      "type": "integer",
+      "default": 0
+    },
+    "reviveCount": {
+      "type": "integer",
+      "default": 0
+    },
+    "kdr": {
+      "type": "float"
+    },
+    "idr": {
+      "type": "float"
+    },
+    "rir": {
+      "type": "float"
+    },
+    "scoreInf": {
+      "type": "integer"
+    },
+    "scoreBully": {
+      "type": "integer"
+    },
+    "ticketsLive": {
+      "type": "integer"
+    },
+    "endTickets": {
+      "type": "integer"
+    },
+    "otherLossTickets": {
+      "type": "integer"
+    },
+    "finalScore": {
+      "type": "float"
+    },
+    "match": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::match.match"
+    },
+    "squads": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::squad.squad"
+    },
+    "kills": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::kill.kill"
+    },
+    "incaps": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::incap.incap"
+    },
+    "revives": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::revive.revive"
+    },
+    "hasWon": {
+      "type": "boolean"
+    },
+    "deaths": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::kill.kill"
+    },
+    "incapVictimCount": {
+      "type": "integer"
+    },
+    "kir": {
+      "type": "float"
+    },
+    "iir": {
+      "type": "float"
+    }
+  }
+}

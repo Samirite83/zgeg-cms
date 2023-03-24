@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "incaps",
+  "info": {
+    "singularName": "incap",
+    "pluralName": "incaps",
+    "displayName": "Incap",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "weapon": {
+      "type": "string"
+    },
+    "damage": {
+      "type": "float"
+    },
+    "isTeamkill": {
+      "type": "boolean"
+    },
+    "attacker": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::player.player"
+    },
+    "victim": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::player.player"
+    },
+    "time": {
+      "type": "datetime"
+    },
+    "squad": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::squad.squad"
+    },
+    "team": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::team.team"
+    },
+    "match": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::match.match"
+    },
+    "isLive": {
+      "type": "boolean"
+    },
+    "isSuicide": {
+      "type": "boolean"
+    }
+  }
+}

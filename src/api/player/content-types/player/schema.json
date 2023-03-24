@@ -1,0 +1,137 @@
+{
+  "kind": "collectionType",
+  "collectionName": "players",
+  "info": {
+    "singularName": "player",
+    "pluralName": "players",
+    "displayName": "Player",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "playerID": {
+      "type": "integer",
+      "unique": false,
+      "required": false
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "suffix": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "isPlaying": {
+      "type": "boolean",
+      "default": false
+    },
+    "lastWeapon": {
+      "type": "string",
+      "required": false
+    },
+    "steamID": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "lastAttacker": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::player.player"
+    },
+    "killCount": {
+      "type": "integer"
+    },
+    "deathCount": {
+      "type": "integer"
+    },
+    "incapCount": {
+      "type": "integer"
+    },
+    "reviveCount": {
+      "type": "integer"
+    },
+    "globalKdr": {
+      "type": "float"
+    },
+    "globalIdr": {
+      "type": "float"
+    },
+    "kills": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::kill.kill"
+    },
+    "incapsAttacker": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::incap.incap"
+    },
+    "revives": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::revive.revive"
+    },
+    "matches": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::match.match"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "player"
+    },
+    "squadsCreated": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::squad.squad"
+    },
+    "incapsVictim": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::incap.incap"
+    },
+    "deaths": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::kill.kill"
+    },
+    "currentSquad": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::squad.squad"
+    },
+    "revivesBy": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::revive.revive"
+    },
+    "guildTag": {
+      "type": "string"
+    },
+    "currentTeam": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::team.team"
+    },
+    "globalKir": {
+      "type": "float"
+    },
+    "globalIir": {
+      "type": "float"
+    },
+    "incapVictimCount": {
+      "type": "integer"
+    },
+    "revivedCount": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "kind": "collectionType",
+  "collectionName": "squads",
+  "info": {
+    "singularName": "squad",
+    "pluralName": "squads",
+    "displayName": "Squad",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "squadID": {
+      "type": "integer"
+    },
+    "squadName": {
+      "type": "string"
+    },
+    "isLocked": {
+      "type": "boolean",
+      "default": false
+    },
+    "killCount": {
+      "type": "integer",
+      "default": 0
+    },
+    "deathCount": {
+      "type": "integer",
+      "default": 0
+    },
+    "incapCount": {
+      "type": "integer",
+      "default": 0
+    },
+    "reviveCount": {
+      "type": "integer",
+      "default": 0
+    },
+    "kdr": {
+      "type": "float"
+    },
+    "idr": {
+      "type": "float"
+    },
+    "rir": {
+      "type": "float"
+    },
+    "scoreInf": {
+      "type": "integer"
+    },
+    "finalScore": {
+      "type": "float"
+    },
+    "team": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::team.team"
+    },
+    "match": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::match.match"
+    },
+    "players": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::player.player"
+    },
+    "kills": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::kill.kill"
+    },
+    "incaps": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::incap.incap"
+    },
+    "revives": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::revive.revive"
+    },
+    "creator": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::player.player"
+    },
+    "deaths": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::kill.kill"
+    },
+    "incapVictimCount": {
+      "type": "integer"
+    },
+    "kir": {
+      "type": "float"
+    },
+    "iir": {
+      "type": "float"
+    }
+  }
+}

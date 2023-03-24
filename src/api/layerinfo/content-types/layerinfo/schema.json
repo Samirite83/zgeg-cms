@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "layerinfos",
+  "info": {
+    "singularName": "layerinfo",
+    "pluralName": "layerinfos",
+    "displayName": "Layerinfo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "classname": {
+      "type": "string",
+      "unique": true
+    },
+    "map": {
+      "type": "string"
+    },
+    "gamemode": {
+      "type": "string"
+    },
+    "numberOfCapturePoints": {
+      "type": "integer"
+    }
+  }
+}

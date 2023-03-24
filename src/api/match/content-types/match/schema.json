@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "matches",
+  "info": {
+    "singularName": "match",
+    "pluralName": "matches",
+    "displayName": "Match",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "startTime": {
+      "type": "datetime"
+    },
+    "endTime": {
+      "type": "datetime"
+    },
+    "matchTimeout": {
+      "type": "float"
+    },
+    "isFinished": {
+      "type": "boolean",
+      "default": false
+    },
+    "isDraw": {
+      "type": "boolean"
+    },
+    "isSeed": {
+      "type": "boolean"
+    },
+    "layerinfo": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::layerinfo.layerinfo"
+    },
+    "teams": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::team.team"
+    },
+    "layerName": {
+      "type": "string"
+    }
+  }
+}

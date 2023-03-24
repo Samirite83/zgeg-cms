@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "servers",
+  "info": {
+    "singularName": "server",
+    "pluralName": "servers",
+    "displayName": "Server",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "serverName": {
+      "type": "string"
+    },
+    "isOnline": {
+      "type": "boolean",
+      "default": false
+    },
+    "playerCount": {
+      "type": "integer"
+    },
+    "maxPlayers": {
+      "type": "integer"
+    },
+    "publicSlots": {
+      "type": "integer"
+    },
+    "publicQueue": {
+      "type": "integer"
+    },
+    "reserveQueue": {
+      "type": "integer"
+    },
+    "gameVersion": {
+      "type": "string"
+    },
+    "tickrate": {
+      "type": "float"
+    },
+    "matches": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::match.match"
+    },
+    "reserveSlots": {
+      "type": "integer"
+    }
+  }
+}

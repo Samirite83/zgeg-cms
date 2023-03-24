@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "revives",
+  "info": {
+    "singularName": "revive",
+    "pluralName": "revives",
+    "displayName": "Revive",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "time": {
+      "type": "datetime"
+    },
+    "victim": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::player.player"
+    },
+    "reviver": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::player.player"
+    },
+    "match": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::match.match"
+    },
+    "team": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::team.team"
+    },
+    "squad": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::squad.squad"
+    },
+    "isLive": {
+      "type": "boolean"
+    }
+  }
+}
