@@ -17,16 +17,15 @@ export default {
    * run jobs, or perform some special logic.
    */
   bootstrap({ strapi }) {
-    console.log("YOOLO");
-    const io = require("socket.io")(strapi.server.httpServer, {
-      path: "/socket/v1/",
-      cors: { origin: "*", methods: ["GET"] },
-      credential: false,
-    });
-    strapi.io = io;
-
-    io.on("connection", function (socket) {
-      console.log("New co : " + socket.id);
-    });
+    // console.log("YOOLO" + JSON.stringify(strapi.$io));
+    // const io = require("socket.io")(strapi.server.httpServer, {
+    //   path: "/socket/v1/",
+    //   cors: { origin: "*", methods: ["GET"] },
+    //   credential: false,
+    // });
+    // strapi.io = io;
+    // io.on("connection", function (socket) {
+    //   console.log("New co : " + socket.id);
+    // });
   },
 };
